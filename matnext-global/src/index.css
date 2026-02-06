@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Matnext Sustainability Dashboard Design System */
+
+@layer base {
+  :root {
+    /* New Color Palette - #547a1d Primary */
+    --color-primary: #547a1d;
+    --color-primary-dark: #547a1d;
+    --color-primary-medium: #a7e074;
+    --color-primary-light: #c0ec83;
+    --color-primary-xlight: #c9f48f;
+    --color-primary-ylight: #f8ffef;
+    --color-black: #000;
+    --color-white: #fff;
+    --color-mandatory: #ff4d4f;
+    --color-red: #ff7171;
+    --color-green: #92ca6d;
+    --color-disable: #b8b8b8;
+    --light-gray: #ddd;
+    --primary-light-gray: #cdcdcd;
+    --color-bg: rgb(255, 255, 255);
+    --color-link: rgb(49, 61, 236);
+    --light-yellow: #fffbe6;
+    --yellow: #ffe58f;
+    --color-font: #fff;
+
+    /* HSL versions for Tailwind compatibility */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+
+    --card: 80 100% 97%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 80 100% 97%;
+    --popover-foreground: 0 0% 0%;
+
+    /* Primary - #547a1d (HSL: 82 62% 29%) */
+    --primary: 82 62% 29%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Light green */
+    --secondary: 82 75% 69%;
+    --secondary-foreground: 82 62% 20%;
+
+    /* Muted */
+    --muted: 80 20% 92%;
+    --muted-foreground: 0 0% 45%;
+
+    /* Accent - Medium green #a7e074 */
+    --accent: 89 65% 67%;
+    --accent-foreground: 82 62% 20%;
+
+    --destructive: 0 72% 65%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 87%;
+    --input: 0 0% 87%;
+    --ring: 82 62% 29%;
+
+    --radius: 0.75rem;
+
+    /* Dashboard Specific Colors */
+    --header-bg: 82 62% 29%;
+    --header-text: 0 0% 100%;
+
+    /* KPI Card Colors */
+    --kpi-green: 89 65% 67%;
+    --kpi-green-text: 82 62% 20%;
+    --kpi-blue: 210 50% 70%;
+    --kpi-blue-text: 210 50% 25%;
+    --kpi-gold: 43 50% 65%;
+    --kpi-gold-text: 43 50% 25%;
+    --kpi-pink: 0 50% 85%;
+    --kpi-pink-text: 0 50% 35%;
+
+    /* Status/Progress Colors */
+    --status-success: 90 47% 61%;
+    --status-warning: 38 92% 50%;
+    --status-danger: 0 100% 72%;
+    --status-success-bg: 80 100% 97%;
+    --status-warning-bg: 49 100% 95%;
+    --status-danger-bg: 0 100% 92%;
+
+    /* Chart Colors */
+    --chart-emerald: 82 62% 29%;
+    --chart-blue: 217 91% 60%;
+    --chart-amber: 43 96% 56%;
+    --chart-rose: 350 89% 60%;
+
+    /* Glassmorphism */
+    --glass-bg: 0 0% 100% / 0.7;
+    --glass-border: 0 0% 100% / 0.3;
+
+    /* Sidebar */
+    --sidebar-background: 80 100% 97%;
+    --sidebar-foreground: 82 62% 20%;
+    --sidebar-primary: 82 62% 29%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 89 65% 85%;
+    --sidebar-accent-foreground: 82 62% 20%;
+    --sidebar-border: 0 0% 87%;
+    --sidebar-ring: 82 62% 29%;
+  }
+
+  .dark {
+    --background: 75 20% 8%;
+    --foreground: 60 20% 95%;
+
+    --card: 75 20% 12%;
+    --card-foreground: 60 20% 95%;
+
+    --popover: 75 20% 12%;
+    --popover-foreground: 60 20% 95%;
+
+    --primary: 75 60% 45%;
+    --primary-foreground: 75 30% 10%;
+
+    --secondary: 75 20% 18%;
+    --secondary-foreground: 60 20% 90%;
+
+    --muted: 75 15% 20%;
+    --muted-foreground: 60 15% 60%;
+
+    --accent: 75 50% 40%;
+    --accent-foreground: 60 30% 98%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 75 20% 20%;
+    --input: 75 20% 20%;
+    --ring: 75 60% 45%;
+
+    --sidebar-background: 75 25% 10%;
+    --sidebar-foreground: 60 20% 90%;
+    --sidebar-primary: 75 60% 45%;
+    --sidebar-primary-foreground: 60 30% 98%;
+    --sidebar-accent: 75 25% 18%;
+    --sidebar-accent-foreground: 60 20% 90%;
+    --sidebar-border: 75 20% 20%;
+    --sidebar-ring: 75 60% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+
+  /* Glassmorphism Effect */
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/30;
+  }
+
+  /* KPI Cards */
+  .kpi-card-green {
+    background: hsl(var(--kpi-green));
+    color: hsl(var(--kpi-green-text));
+  }
+
+  .kpi-card-blue {
+    background: hsl(var(--kpi-blue));
+    color: hsl(var(--kpi-blue-text));
+  }
+
+  .kpi-card-gold {
+    background: hsl(var(--kpi-gold));
+    color: hsl(var(--kpi-gold-text));
+  }
+
+  .kpi-card-pink {
+    background: hsl(var(--kpi-pink));
+    color: hsl(var(--kpi-pink-text));
+  }
+
+  /* Header */
+  .dashboard-header {
+    background: hsl(var(--header-bg));
+    color: hsl(var(--header-text));
+  }
+
+  /* Pulsing dot for live status */
+  .pulse-dot {
+    @apply relative;
+  }
+
+  .pulse-dot::before {
+    content: '';
+    @apply absolute w-3 h-3 bg-emerald-500 rounded-full;
+    animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  }
+
+  .pulse-dot::after {
+    content: '';
+    @apply absolute w-3 h-3 bg-emerald-500 rounded-full;
+  }
+
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    80%,
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+
+  /* Progress circle glow */
+  .progress-glow {
+    filter: drop-shadow(0 0 8px hsl(var(--accent) / 0.4));
+  }
+
+  /* Card hover effect */
+  .card-hover {
+    @apply transition-all duration-300;
+  }
+
+  .card-hover:hover {
+    @apply shadow-lg -translate-y-1;
+    box-shadow: 0 20px 40px -15px hsl(var(--primary) / 0.15);
+  }
+
+  /* Ant Design Overrides */
+  .ant-select-selector {
+    @apply rounded-lg !important;
+    border-color: hsl(var(--border)) !important;
+  }
+
+  .ant-select:hover .ant-select-selector {
+    border-color: hsl(var(--primary)) !important;
+  }
+
+  .ant-tabs-tab {
+    @apply font-medium !important;
+  }
+
+  .ant-tabs-tab-active {
+    color: hsl(var(--primary)) !important;
+  }
+
+  .ant-tabs-ink-bar {
+    background: hsl(var(--primary)) !important;
+  }
+
+  .ant-progress-circle .ant-progress-text {
+    @apply font-semibold !important;
+  }
+
+  .ant-tag {
+    @apply rounded-full px-3 py-0.5 !important;
+  }
+
+  .ant-table-thead>tr>th {
+    background: hsl(var(--secondary)) !important;
+    @apply font-semibold !important;
+  }
+
+  .ant-skeleton-content .ant-skeleton-title,
+  .ant-skeleton-content .ant-skeleton-paragraph>li {
+    background: linear-gradient(90deg, hsl(var(--muted)) 25%, hsl(var(--secondary)) 50%, hsl(var(--muted)) 75%) !important;
+    background-size: 200% 100% !important;
+    animation: skeleton-loading 1.5s infinite !important;
+  }
+
+  @keyframes skeleton-loading {
+    0% {
+      background-position: 200% 0;
+    }
+
+    100% {
+      background-position: -200% 0;
+    }
+  }
+
+  /* Traffic Light Status Colors */
+  .status-success {
+    background: hsl(var(--status-success-bg));
+    color: hsl(var(--status-success));
+  }
+
+  .status-warning {
+    background: hsl(var(--status-warning-bg));
+    color: hsl(var(--status-warning));
+  }
+
+  .status-danger {
+    background: hsl(var(--status-danger-bg));
+    color: hsl(var(--status-danger));
+  }
+
+  /* Targets Modal Styling */
+  .targets-modal .ant-modal-header {
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .targets-modal .ant-modal-title {
+    width: 100%;
+  }
+
+  .targets-table .ant-table-thead>tr>th {
+    background: #5a7a32 !important;
+    color: white !important;
+    font-weight: 600 !important;
+  }
+}
