@@ -15,8 +15,7 @@ import { cn } from '@/lib/utils';
 const { Header } = Layout;
 
 const navItems = [
-    { path: '/', label: 'Overview', icon: <GlobalOutlined /> },
-    { path: '/regions', label: 'Regions', icon: <EnvironmentOutlined /> },
+    { path: '/', label: 'Regions', icon: <EnvironmentOutlined /> },
     { path: '/products', label: 'Products', icon: <CodeSandboxOutlined /> },
     { path: '/supply-chain', label: 'Supply Chain', icon: <PartitionOutlined /> },
     { path: '/circularity', label: 'Circularity', icon: <SyncOutlined /> },

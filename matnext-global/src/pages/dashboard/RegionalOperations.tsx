@@ -1,6 +1,11 @@
 import React from 'react';
 import { Tabs, Typography } from 'antd';
 import { IndiaDashboard } from '@/components/dashboard/regions/IndiaDashboard';
+import { JapanDashboard } from '@/components/dashboard/regions/JapanDashboard';
+import { EuropeDashboard } from '@/components/dashboard/regions/EuropeDashboard';
+import { MPADashboard } from '@/components/dashboard/regions/MPADashboard';
+import { AsiaDashboard } from '@/components/dashboard/regions/AsiaDashboard';
+import { LatAmOceaniaDashboard } from '@/components/dashboard/regions/LatAmOceaniaDashboard';
 
 const { Title, Text } = Typography;
 
@@ -8,7 +13,7 @@ export const RegionalOperations: React.FC = () => {
     const items = [
         {
             key: 'india',
-            label: 'India',
+            label: '🇮🇳 India',
             children: (
                 <div className="pt-2">
                     <IndiaDashboard />
@@ -17,28 +22,48 @@ export const RegionalOperations: React.FC = () => {
         },
         {
             key: 'japan',
-            label: 'Japan',
-            children: <div className="p-8 text-center text-muted-foreground bg-muted/20 rounded-lg border border-dashed border-border h-64 flex items-center justify-center">Japan Regional Data Placeholder</div>
+            label: '🇯🇵 Japan',
+            children: (
+                <div className="pt-2">
+                    <JapanDashboard />
+                </div>
+            )
         },
         {
             key: 'europe',
-            label: 'Europe',
-            children: <div className="p-8 text-center text-muted-foreground bg-muted/20 rounded-lg border border-dashed border-border h-64 flex items-center justify-center">Europe Regional Data Placeholder</div>
+            label: '🇪🇺 Europe',
+            children: (
+                <div className="pt-2">
+                    <EuropeDashboard />
+                </div>
+            )
         },
         {
             key: 'mpa',
-            label: 'MPA',
-            children: <div className="p-8 text-center text-muted-foreground bg-muted/20 rounded-lg border border-dashed border-border h-64 flex items-center justify-center">MPA Regional Data Placeholder</div>
+            label: '🌍 MPA',
+            children: (
+                <div className="pt-2">
+                    <MPADashboard />
+                </div>
+            )
         },
         {
             key: 'asia',
-            label: 'Asia',
-            children: <div className="p-8 text-center text-muted-foreground bg-muted/20 rounded-lg border border-dashed border-border h-64 flex items-center justify-center">Asia Regional Data Placeholder</div>
+            label: '🌏 Asia',
+            children: (
+                <div className="pt-2">
+                    <AsiaDashboard />
+                </div>
+            )
         },
         {
             key: 'latam-oceania',
-            label: 'LatAM and Oceania',
-            children: <div className="p-8 text-center text-muted-foreground bg-muted/20 rounded-lg border border-dashed border-border h-64 flex items-center justify-center">LatAM and Oceania Regional Data Placeholder</div>
+            label: '🌎 LatAM & Oceania',
+            children: (
+                <div className="pt-2">
+                    <LatAmOceaniaDashboard />
+                </div>
+            )
         },
     ];
 
@@ -48,3 +73,4 @@ export const RegionalOperations: React.FC = () => {
         </div>
     );
 }
+

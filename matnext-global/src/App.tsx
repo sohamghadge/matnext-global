@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { DashboardLayout } from '@/components/layout/DashboardLayout';
-import { Overview } from '@/pages/dashboard/Overview';
 import { RegionalOperations } from '@/pages/dashboard/RegionalOperations';
 import { SupplyChain } from '@/pages/dashboard/SupplyChain';
 import { Circularity } from '@/pages/dashboard/Circularity';
@@ -13,8 +12,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<DashboardLayout />}>
-          <Route index element={<Overview />} />
-          <Route path="regions" element={<RegionalOperations />} />
+          <Route index element={<RegionalOperations />} />
           <Route path="products" element={<Products />} />
           <Route path="supply-chain" element={<SupplyChain />} />
           <Route path="circularity" element={<Circularity />} />

@@ -11,7 +11,7 @@ import { useFilters } from '@/context/FilterContext';
 
 export const IndiaDashboard: React.FC = () => {
     const { filters } = useFilters();
-    const [activeTab, setActiveTab] = useState('recyclers'); // Set Recyclers as default for testing
+    const [activeTab, setActiveTab] = useState('msil'); // Set Corporate (MSIL) as default
     const [isLoading, setIsLoading] = useState(false);
 
     const tabItems = [
