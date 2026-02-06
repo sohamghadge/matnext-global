@@ -58,7 +58,7 @@ export const RegionalOperations: React.FC = () => {
         },
         {
             key: 'latam-oceania',
-            label: '🌎 LatAM & Oceania',
+            label: '🌎 LatAm & Oceania',
             children: (
                 <div className="pt-2">
                     <LatAmOceaniaDashboard />
