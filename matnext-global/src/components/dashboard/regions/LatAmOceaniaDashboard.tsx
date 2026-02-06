@@ -43,7 +43,7 @@ export const LatAmOceaniaDashboard: React.FC = () => {
         <div className="space-y-4 animate-fade-in">
             {/* Header */}
             <div className="mb-4">
-                <Title level={4} className="!mb-1 text-foreground">🌎 LatAM & Oceania Operations</Title>
+                <Title level={4} className="!mb-1 text-foreground">🌎 LatAm & Oceania Operations</Title>
                 <Text type="secondary">Latin America & Oceania - Emerging Sustainability Programs</Text>
             </div>
 
@@ -114,7 +114,7 @@ export const LatAmOceaniaDashboard: React.FC = () => {
                                 <YAxis stroke="#6B7280" fontSize={12} />
                                 <Tooltip contentStyle={{ borderRadius: 8 }} />
                                 <Legend />
-                                <Line type="monotone" dataKey="latam" stroke="#06B6D4" strokeWidth={2} name="🌎 LatAM" dot={{ fill: '#06B6D4' }} />
+                                <Line type="monotone" dataKey="latam" stroke="#06B6D4" strokeWidth={2} name="🌎 LatAm" dot={{ fill: '#06B6D4' }} />
                                 <Line type="monotone" dataKey="oceania" stroke="#F43F5E" strokeWidth={2} name="🌏 Oceania" dot={{ fill: '#F43F5E' }} />
                             </LineChart>
                         </ResponsiveContainer>
