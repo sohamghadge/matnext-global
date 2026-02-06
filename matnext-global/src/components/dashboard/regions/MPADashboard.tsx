@@ -36,8 +36,8 @@ export const MPADashboard: React.FC = () => {
         <div className="space-y-4 animate-fade-in">
             {/* Header */}
             <div className="mb-4">
-                <Title level={4} className="!mb-1 text-foreground">🌍 MPA Region Operations</Title>
-                <Text type="secondary">Middle East, Pakistan & Africa - Emerging Markets Sustainability</Text>
+                <Title level={4} className="!mb-1 text-foreground">🌍 MEA Region Operations</Title>
+                <Text type="secondary">Middle East & Africa - Emerging Markets Sustainability</Text>
             </div>
 
             {/* KPI Cards */}

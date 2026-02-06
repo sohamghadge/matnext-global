@@ -40,7 +40,7 @@ export const RegionalOperations: React.FC = () => {
         },
         {
             key: 'mpa',
-            label: '🌍 MPA',
+            label: '🌍 MEA',
             children: (
                 <div className="pt-2">
                     <MPADashboard />
